@@ -17,44 +17,44 @@
 <section class="panel" aria-labelledby="select-title">
 <div class="panel-head"><h2 id="select-title"><span class="step">1</span>Seleccione los casos</h2><p class="subtext">Puede marcar varios motivos en la misma comunicación.</p></div>
 <div class="mode" role="radiogroup" aria-label="Tipo de comunicación"><label><input type="radio" name="mode" value="observation" checked><span>Observación</span></label><label><input type="radio" name="mode" value="verification"><span>Solicitud de verificación</span></label></div>
-<div class="support"><label for="support">Tipo de publicación</label><select id="support"><option value="physical">Publicación física</option><option value="ebook">Libro electrónico / digital / e-book</option><option value="digital">Otro material en soporte digital</option></select></div>
+<div class="support" id="support-section"><label for="support">Tipo de publicación</label><select id="support"><option value="physical">Publicación física</option><option value="ebook">Libro electrónico</option></select></div>
 <div id="observation-pane">
 <div class="section-label"><span>Motivos del numeral 20.1</span><span class="count" id="observation-count">0 seleccionados</span></div>
-<details open><summary><span>Datos obligatorios omitidos<span class="group-ref">Hoja de créditos</span></span></summary><div class="options">
+<details open><summary><span>Datos obligatorios omitidos<span class="group-ref">Hoja de créditos o parte que haga sus veces</span></span></summary><div class="options">
 <label class="choice"><input type="checkbox" data-mode="observation" value="title"><span>Título de la publicación<small>Literal a)</small></span></label>
 <label class="choice"><input type="checkbox" data-mode="observation" value="edition"><span>Número de edición<small>Literal b)</small></span></label>
-<label class="choice"><input type="checkbox" data-mode="observation" value="author"><span>Nombre del autor, según corresponda<small>Literal c)</small></span></label>
-<label class="choice"><input type="checkbox" data-mode="observation" value="publisherName"><span>Razón social del editor, según corresponda<small>Literal d)</small></span></label>
-<label class="choice"><input type="checkbox" data-mode="observation" value="publisherAddress"><span>Domicilio legal del editor, según corresponda<small>Literal d)</small></span></label>
-<label class="choice" data-ebook-excluded><input type="checkbox" data-mode="observation" value="printerName"><span>Razón social del impresor, según corresponda<small>Literal e)</small></span></label>
-<label class="choice" data-ebook-excluded><input type="checkbox" data-mode="observation" value="printerAddress"><span>Domicilio legal del impresor, según corresponda<small>Literal e)</small></span></label>
+<label class="choice"><input type="checkbox" data-mode="observation" value="author"><span>Nombre del autor<small>Literal c)</small></span></label>
+<label class="choice"><input type="checkbox" data-mode="observation" value="publisherName"><span>Razón social del editor<small>Literal d)</small></span></label>
+<label class="choice"><input type="checkbox" data-mode="observation" value="publisherAddress"><span>Domicilio legal del editor<small>Literal d)</small></span></label>
+<label class="choice" data-ebook-excluded><input type="checkbox" data-mode="observation" value="printerName"><span>Razón social del impresor<small>Literal e)</small></span></label>
+<label class="choice" data-ebook-excluded><input type="checkbox" data-mode="observation" value="printerAddress"><span>Domicilio legal del impresor<small>Literal e)</small></span></label>
 <label class="choice"><input type="checkbox" data-mode="observation" value="month"><span>Mes de edición<small>Literal f)</small></span></label>
 <label class="choice"><input type="checkbox" data-mode="observation" value="year"><span>Año de edición<small>Literal f)</small></span></label>
 <label class="choice" data-ebook-excluded><input type="checkbox" data-mode="observation" value="printRun"><span>Tiraje de la publicación<small>Literal g)</small></span></label>
 <label class="choice"><input type="checkbox" data-mode="observation" value="legalNumber"><span>Número de registro de depósito legal<small>Literal h)</small></span></label>
 <p class="small-note" id="ebook-note" hidden>Los datos del impresor y el tiraje están exceptuados para los libros electrónicos / digitales / e-books.</p>
 </div></details>
-<details><summary><span>Cantidad de ejemplares</span></summary><div class="options"><label class="choice"><input type="checkbox" data-mode="observation" value="missingCopies"><span>Falta de ejemplares</span></label><div class="fields" id="copies-field" hidden><label for="copies">Cantidad de ejemplares faltantes (opcional)</label><input id="copies" type="number" min="1" step="1" placeholder="Ej.: 2"></div></div></details>
-<details><summary><span>Presunción de fotocopias</span></summary><div class="options"><label class="choice"><input type="checkbox" data-mode="observation" value="photocopies"><span>Ejemplares con características de fotocopias</span></label></div></details>
+<details data-physical-only><summary><span>Cantidad de ejemplares</span></summary><div class="options"><label class="choice"><input type="checkbox" data-mode="observation" value="missingCopies"><span>Falta de ejemplares</span></label><div class="fields" id="copies-field" hidden><label for="copies">Cantidad de ejemplares faltantes (opcional)</label><input id="copies" type="number" min="1" step="1" placeholder="Ej.: 2"></div></div></details>
+<details data-physical-only><summary><span>Presunción de fotocopias</span></summary><div class="options"><label class="choice"><input type="checkbox" data-mode="observation" value="photocopies"><span>Ejemplares con características de fotocopias</span></label></div></details>
 <details><summary><span>Fallas en los ejemplares</span></summary><div class="options">
-<label class="choice"><input type="checkbox" data-mode="observation" value="binding"><span>Fallas en la encuadernación</span></label>
-<label class="choice"><input type="checkbox" data-mode="observation" value="printing"><span>Fallas en la impresión</span></label>
+<label class="choice" data-physical-only><input type="checkbox" data-mode="observation" value="binding"><span>Fallas en la encuadernación</span></label>
+<label class="choice" data-physical-only><input type="checkbox" data-mode="observation" value="printing"><span>Fallas en la impresión</span></label>
 <label class="choice"><input type="checkbox" data-mode="observation" value="blankPages"><span>Hojas en blanco</span></label>
 <label class="choice"><input type="checkbox" data-mode="observation" value="incompletePages"><span>Hojas incompletas</span></label>
 <label class="choice"><input type="checkbox" data-mode="observation" value="illegiblePages"><span>Hojas ilegibles</span></label>
 </div></details>
 <details><summary><span>Número de depósito legal incorrecto</span></summary><div class="options"><label class="choice"><input type="checkbox" data-mode="observation" value="wrongNumber"><span>Se consignó un número incorrecto</span></label><div class="fields" id="number-field" hidden><label for="correct-number">Número correcto (opcional)</label><input id="correct-number" type="text" maxlength="30" placeholder="Ej.: 2026-12345" autocomplete="off"></div></div></details>
-<details><summary><span>Enlace inactivo</span></summary><div class="options"><label class="choice"><input type="checkbox" data-mode="observation" value="inactiveLink"><span>El enlace que aloja la publicación está inactivo</span></label><p class="small-note">Corresponde cuando el enlace está inactivo. Para enlaces activos con otra obra, otra edición o información insuficiente, use «Solicitud de verificación».</p></div></details>
+<details data-digital-only hidden><summary><span>Enlace inactivo</span></summary><div class="options"><label class="choice"><input type="checkbox" data-mode="observation" value="inactiveLink"><span>El enlace que aloja la publicación está inactivo</span></label><p class="small-note">Corresponde cuando el enlace está inactivo. Para enlaces activos con otra obra, otra edición o información insuficiente, use «Solicitud de verificación».</p></div></details>
 </div>
 <div id="verification-pane" hidden>
-<div class="notice">Estas comunicaciones permiten continuar la verificación del numeral 12.6. No se presentan como nuevos motivos de observación ni incluyen automáticamente el plazo de cinco días.</div>
+<div class="notice">Estas comunicaciones permiten continuar la verificación del numeral 12.6. No se presentan como nuevos motivos de observación ni incluyen automáticamente el plazo de cinco días. Se sugiere remitir por correo o contactar directamente al editor.</div>
 <div class="section-label"><span>Casos de verificación</span><span class="count" id="verification-count">0 seleccionados</span></div>
 <div class="options" style="padding-left:16px;padding-right:16px">
 <label class="choice"><input type="checkbox" data-mode="verification" value="differentWork"><span>El enlace corresponde a otra obra</span></label>
 <label class="choice"><input type="checkbox" data-mode="verification" value="differentEdition"><span>El enlace corresponde a otra edición o versión</span></label>
 <label class="choice"><input type="checkbox" data-mode="verification" value="notFound"><span>La obra no se ubica en el enlace</span></label>
 <label class="choice"><input type="checkbox" data-mode="verification" value="restrictedAccess"><span>Acceso insuficiente al contenido para su evaluación</span></label>
-<label class="choice"><input type="checkbox" data-mode="verification" value="unidentifiedEdition"><span>No se puede identificar la edición en la plataforma de venta o suscripción</span></label>
+<label class="choice"><input type="checkbox" data-mode="verification" value="unidentifiedEdition"><span>No se puede identificar la edición</span></label>
 </div>
 </div>
 <div class="clear-row"><small>Los cambios actualizan el texto al instante.</small><button type="button" class="quiet" id="clear">Limpiar selección</button></div>
@@ -159,7 +159,16 @@ return `${today()}. Para continuar la verificación: ${reasons.join('; ')}. Se s
 }
 function generate(){
 const mode=currentMode();
+$('support-section').hidden=mode==='verification';
+const physical=$('support').value==='physical';
 const ebook=$('support').value==='ebook';
+for(const [selector,visible] of [['[data-physical-only]',physical],['[data-digital-only]',!physical]]){
+document.querySelectorAll(selector).forEach(element=>{
+element.hidden=!visible;
+if(!visible)element.querySelectorAll('input[data-mode="observation"]').forEach(input=>input.checked=false);
+});
+}
+if(!physical)$('copies').value='';
 document.querySelectorAll('[data-ebook-excluded]').forEach(label=>{label.hidden=ebook;if(ebook)label.querySelector('input').checked=false;});
 $('ebook-note').hidden=!ebook;
 $('observation-pane').hidden=mode!=='observation';
