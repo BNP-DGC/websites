@@ -6,17 +6,19 @@
 <meta name="color-scheme" content="light">
 <title>Depósito legal · Generador de notificaciones</title>
 <style>
-:root{--wine:#751d36;--wine-dark:#4f1024;--soft:#f8f0f2;--paper:#f5f3ef;--ink:#252631;--muted:#626371;--line:#e2dfe0;--gold:#b58b45;--white:#fff;--green:#216349;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper)}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #d4a655;outline-offset:3px}.topbar{background:var(--wine-dark);color:#fff;border-bottom:4px solid var(--gold)}.top-inner{max-width:1380px;margin:auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-weight:700;letter-spacing:.08em;font-size:13px}.top-note{font-size:12px;color:#e6d4da}.page{max-width:1380px;margin:auto;padding:36px 32px 50px}.intro{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--wine);font-weight:700;font-size:11px;margin-bottom:10px}h1{font-size:clamp(25px,3.2vw,36px);letter-spacing:-.035em;line-height:1.13;margin:0 0 12px}h2{font-size:18px;margin:0}p{line-height:1.5}.intro p{font-size:14px;color:var(--muted);margin:0;max-width:660px}.date-pill{display:flex;align-items:center;gap:9px;padding:12px 15px;background:#fff;border:1px solid var(--line);border-radius:9px;font-size:13px;white-space:nowrap}.date-pill svg{color:var(--wine)}.layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:25px;align-items:start}.panel{border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden;box-shadow:0 5px 20px #35111c04}.panel-head{padding:22px 24px 0}.step{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;background:var(--soft);color:var(--wine);border-radius:50%;font-size:12px;font-weight:700;margin-right:8px}.subtext{font-size:13px;color:var(--muted);margin:10px 0 0}.mode{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:21px 24px 16px;padding:5px;background:var(--paper);border-radius:10px}.mode label{position:relative;cursor:pointer;text-align:center}.mode input{position:absolute;opacity:0}.mode span{display:block;padding:11px 5px;border-radius:7px;font-size:13px;font-weight:700;color:var(--muted)}.mode input:checked+span{background:var(--wine);color:#fff;box-shadow:0 2px 5px #751d3620}.mode input:focus-visible+span{outline:3px solid var(--gold)}.support{padding:0 24px 20px}.support label{font-size:12px;font-weight:700;display:block;margin-bottom:8px}.support select{width:100%;padding:11px 12px;border:1px solid #ccc9ce;border-radius:7px;background:#fff;color:var(--ink)}.notice{background:#faf6ee;border-left:3px solid var(--gold);font-size:12px;line-height:1.6;padding:12px 14px;color:#5f5138;margin:0 24px 18px}.section-label{display:flex;justify-content:space-between;align-items:center;padding:0 24px 13px;font-size:12px;font-weight:700;color:var(--muted)}.count{border-radius:20px;background:var(--soft);color:var(--wine);padding:5px 10px;font-size:11px}details{border-top:1px solid var(--line)}summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:17px 24px;gap:10px;font-size:14px;font-weight:700}summary::-webkit-details-marker{display:none}summary::after{content:'+';color:var(--wine);font-size:20px;font-weight:400}details[open]>summary::after{content:'−'}.group-ref{font-weight:400;font-size:11px;color:var(--muted);display:block;margin-top:5px}.options{padding:0 16px 12px}.choice{display:flex;align-items:flex-start;gap:11px;padding:11px 9px;border-radius:7px;font-size:13px;line-height:1.4;cursor:pointer}.choice:has(input:checked){background:var(--soft)}.choice:hover{background:#f8f7f6}.choice input{width:17px;height:17px;accent-color:var(--wine);margin:0;flex:0 0 auto}.choice small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.fields{padding:4px 10px 9px}.fields label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}.fields input{width:100%;border:1px solid #ccc9ce;border-radius:6px;padding:9px 10px;font-size:13px}.fields[hidden],.choice[hidden],[hidden]{display:none!important}.small-note{padding:0 9px;margin:5px 0 10px;font-size:11px;line-height:1.6;color:var(--muted)}.clear-row{padding:16px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.quiet{border:0;background:none;color:var(--wine);font-size:12px;font-weight:700;padding:7px 0}.clear-row small{font-size:11px;color:var(--muted)}.result{position:sticky;top:22px}.result-head{padding:23px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}.status-dot{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--green)}.status-dot::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green)}.result-tools{padding:17px 24px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}.output-tag{text-transform:uppercase;font-size:10px;font-weight:700;letter-spacing:.07em;padding:6px 8px;border-radius:4px;background:var(--soft);color:var(--wine)}.copy{display:flex;align-items:center;gap:7px;border:0;border-radius:7px;background:var(--wine);color:#fff;padding:10px 13px;font-weight:700;font-size:12px}.copy:hover{background:var(--wine-dark)}.text-wrap{padding:16px 24px 0}textarea{width:100%;resize:vertical;min-height:320px;border:1px solid var(--line);border-radius:8px;padding:18px;color:var(--ink);background:#fcfbfa;font-size:14px;line-height:1.75}textarea::placeholder{color:#99949c}.result-bottom{padding:12px 24px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px;min-height:53px}.copy-message{font-weight:700;color:var(--green)}.result-actions{border-top:1px solid var(--line);padding:17px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}.generate{border:1px solid #cdb9bf;background:#fff;color:var(--wine);border-radius:7px;padding:10px 12px;font-weight:700;font-size:12px}.toggle{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);cursor:pointer}.toggle input{accent-color:var(--wine)}.reference{border-top:1px solid var(--line);padding:17px 24px;background:#fcfbfa;font-size:11px;color:var(--muted);line-height:1.7}.reference strong{color:var(--ink)}footer{margin-top:26px;font-size:11px;color:var(--muted);line-height:1.7}.empty-hint{font-size:12px;padding:0 24px 18px;color:var(--muted)}@media(max-width:900px){.layout{grid-template-columns:1fr}.result{position:static}.intro{align-items:start}.top-note{display:none}}@media(max-width:540px){.page{padding:25px 14px}.top-inner{padding:18px}.intro{display:block}.date-pill{display:inline-flex;margin-top:18px}.panel-head,.result-head{padding-left:18px;padding-right:18px}.mode{margin-left:18px;margin-right:18px}.result-tools,.text-wrap,.result-bottom,.result-actions,.reference{padding-left:18px;padding-right:18px}.result-actions{flex-wrap:wrap}.support{padding-left:18px;padding-right:18px}summary{padding-left:18px;padding-right:18px}.notice{margin-left:18px;margin-right:18px}.brand{font-size:11px}textarea{min-height:280px}}
+:root{--wine:#751d36;--wine-dark:#4f1024;--soft:#f8f0f2;--paper:#f5f3ef;--ink:#252631;--muted:#626371;--line:#e2dfe0;--gold:#b58b45;--white:#fff;--green:#216349;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper)}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #d4a655;outline-offset:3px}.topbar{background:var(--wine-dark);color:#fff;border-bottom:4px solid var(--gold)}.top-inner{max-width:1380px;margin:auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-weight:700;letter-spacing:.08em;font-size:13px}.top-note{font-size:12px;color:#e6d4da}.page{max-width:1380px;margin:auto;padding:36px 32px 50px}.intro{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--wine);font-weight:700;font-size:11px;margin-bottom:10px}h1{font-size:clamp(25px,3.2vw,36px);letter-spacing:-.035em;line-height:1.13;margin:0 0 12px}h2{font-size:18px;margin:0}p{line-height:1.5}.intro p{font-size:14px;color:var(--muted);margin:0;max-width:660px}.date-pill{display:flex;align-items:center;gap:9px;padding:12px 15px;background:#fff;border:1px solid var(--line);border-radius:9px;font-size:13px;white-space:nowrap}.date-pill svg{color:var(--wine)}.layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:25px;align-items:start}.panel{border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden;box-shadow:0 5px 20px #35111c04}.panel-head{padding:22px 24px 0}.step{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;background:var(--soft);color:var(--wine);border-radius:50%;font-size:12px;font-weight:700;margin-right:8px}.subtext{font-size:13px;color:var(--muted);margin:10px 0 0}.mode{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:21px 24px 16px;padding:5px;background:var(--paper);border-radius:10px}.mode label{position:relative;cursor:pointer;text-align:center}.mode input{position:absolute;opacity:0}.mode span{display:block;padding:11px 5px;border-radius:7px;font-size:13px;font-weight:700;color:var(--muted)}.mode input:checked+span{background:var(--wine);color:#fff;box-shadow:0 2px 5px #751d3620}.mode input:focus-visible+span{outline:3px solid var(--gold)}.support{padding:0 24px 20px}.support label{font-size:12px;font-weight:700;display:block;margin-bottom:8px}.support select{width:100%;padding:11px 12px;border:1px solid #ccc9ce;border-radius:7px;background:#fff;color:var(--ink)}.notice{background:#faf6ee;border-left:3px solid var(--gold);font-size:12px;line-height:1.6;padding:12px 14px;color:#5f5138;margin:0 24px 18px}.section-label{display:flex;justify-content:space-between;align-items:center;padding:0 24px 13px;font-size:12px;font-weight:700;color:var(--muted)}.count{border-radius:20px;background:var(--soft);color:var(--wine);padding:5px 10px;font-size:11px}details{border-top:1px solid var(--line)}summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:17px 24px;gap:10px;font-size:14px;font-weight:700}summary::-webkit-details-marker{display:none}summary::after{content:'+';color:var(--wine);font-size:20px;font-weight:400}details[open]>summary::after{content:'−'}.group-ref{font-weight:400;font-size:11px;color:var(--muted);display:block;margin-top:5px}.options{padding:0 16px 12px}.choice{display:flex;align-items:flex-start;gap:11px;padding:11px 9px;border-radius:7px;font-size:13px;line-height:1.4;cursor:pointer}.choice:has(input:checked){background:var(--soft)}.choice:hover{background:#f8f7f6}.choice input{width:17px;height:17px;accent-color:var(--wine);margin:0;flex:0 0 auto}.choice small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.fields{padding:4px 10px 9px}.fields label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}.fields input{width:100%;border:1px solid #ccc9ce;border-radius:6px;padding:9px 10px;font-size:13px}.fields[hidden],.choice[hidden],[hidden]{display:none!important}.small-note{padding:0 9px;margin:5px 0 10px;font-size:11px;line-height:1.6;color:var(--muted)}.clear-row{padding:16px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.quiet{border:0;background:none;color:var(--wine);font-size:12px;font-weight:700;padding:7px 0}.clear-row small{font-size:11px;color:var(--muted)}.result{position:sticky;top:22px}.result-head{padding:23px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}.status-dot{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--green)}.status-dot::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green)}.result-tools{padding:17px 24px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}.output-tag{text-transform:uppercase;font-size:10px;font-weight:700;letter-spacing:.07em;padding:6px 8px;border-radius:4px;background:var(--soft);color:var(--wine)}.copy{display:flex;align-items:center;gap:7px;border:0;border-radius:7px;background:var(--wine);color:#fff;padding:10px 13px;font-weight:700;font-size:12px}.copy:hover{background:var(--wine-dark)}.text-wrap{padding:16px 24px 0}textarea{width:100%;resize:vertical;min-height:320px;border:1px solid var(--line);border-radius:8px;padding:18px;color:var(--ink);background:#fcfbfa;font-size:14px;line-height:1.75}textarea::placeholder{color:#99949c}.result-bottom{padding:12px 24px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px;min-height:53px}.copy-message{font-weight:700;color:var(--green)}.result-actions{border-top:1px solid var(--line);padding:17px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}.generate{border:1px solid #cdb9bf;background:#fff;color:var(--wine);border-radius:7px;padding:10px 12px;font-weight:700;font-size:12px}.reference{border-top:1px solid var(--line);padding:17px 24px;background:#fcfbfa;font-size:11px;color:var(--muted);line-height:1.7}.reference strong{color:var(--ink)}footer{margin-top:26px;font-size:11px;color:var(--muted);line-height:1.7}.empty-hint{font-size:12px;padding:0 24px 18px;color:var(--muted)}@media(max-width:900px){.layout{grid-template-columns:1fr}.result{position:static}.intro{align-items:start}.top-note{display:none}}@media(max-width:540px){.page{padding:25px 14px}.top-inner{padding:18px}.intro{display:block}.date-pill{display:inline-flex;margin-top:18px}.panel-head,.result-head{padding-left:18px;padding-right:18px}.mode{margin-left:18px;margin-right:18px}.result-tools,.text-wrap,.result-bottom,.result-actions,.reference{padding-left:18px;padding-right:18px}.result-actions{flex-wrap:wrap}.support{padding-left:18px;padding-right:18px}summary{padding-left:18px;padding-right:18px}.notice{margin-left:18px;margin-right:18px}.brand{font-size:11px}textarea{min-height:280px}}
+.module-tabs{display:flex;gap:8px;padding:6px;background:#eae5e7;border-radius:11px;margin:0 0 25px;max-width:620px}.module-tabs label{flex:1;position:relative;cursor:pointer;text-align:center}.module-tabs input{position:absolute;opacity:0}.module-tabs span{display:block;padding:13px 12px;border-radius:7px;font-weight:700;font-size:14px;color:var(--muted)}.module-tabs input:checked+span{background:var(--wine-dark);color:white}.module-tabs input:focus-visible+span{outline:3px solid var(--gold)}.cancel-options{padding:0 16px 16px}.cancel-case{border:1px solid var(--line);margin-bottom:9px;padding:13px 11px;font-size:14px}.cancel-case small{font-size:12px;line-height:1.5}.cancel-fields{padding:4px 24px 23px}.cancel-fields label{font-size:14px;font-weight:700;display:block;margin-bottom:9px}.cancel-fields input{width:100%;padding:12px;border:1px solid #bcb7bd;border-radius:7px;font-size:16px}.cancel-fields input[aria-invalid="true"]{border-color:var(--wine);background:var(--soft)}.field-hint{font-size:12px;line-height:1.6;color:var(--muted);margin:9px 0 0}.extra-section{border-top:1px solid var(--line);padding:20px 24px}.extra-section label{font-size:14px;font-weight:700;display:block;margin-bottom:9px}.extra-section textarea{min-height:95px;background:#fff;font-size:14px;padding:12px;line-height:1.6}.extra-section .field-hint{margin:0 0 12px}.validation-message{margin:15px 24px 0;padding:11px 13px;border-radius:7px;border:1px solid #dcc3cb;background:var(--soft);color:var(--wine-dark);font-size:14px;line-height:1.6}.exclusion-count{padding:0 24px 15px;font-size:13px;color:var(--muted)}#exclusion-groups .choice{font-size:14px}#cancel-pane .notice{font-size:13px}#module-hint{margin-bottom:20px}.result-actions{justify-content:flex-end}.norm-links{font-size:12px;line-height:1.8;padding:0 24px 18px;background:#fcfbfa}.norm-links a{color:var(--wine)}.date-pill{font-size:14px}@media(max-width:540px){.module-tabs span{font-size:13px;padding:12px 7px}.cancel-fields,.extra-section{padding-left:18px;padding-right:18px}.validation-message{margin-left:18px;margin-right:18px}}
 </style>
 </head>
 <body>
 <header class="topbar"><div class="top-inner"><div class="brand">DEPÓSITO LEGAL <span aria-hidden="true">/</span> DGC · UGDS</div><div class="top-note">NPD</div></div></header>
 <main class="page">
 <div class="intro"><div><div class="eyebrow">Evaluación de publicaciones</div><h1>Generador de notificaciones</h1><p>Seleccione los casos que correspondan. El texto se combina automáticamente y queda listo para copiar.</p></div><div class="date-pill"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg><span id="today"></span><span style="color:var(--muted);font-size:11px">Lima</span></div></div>
+<div class="module-tabs" role="radiogroup" aria-label="Módulo de notificaciones"><label><input type="radio" name="module" value="evaluation" checked><span>Observaciones y verificación</span></label><label><input type="radio" name="module" value="cancellation"><span>Anulaciones</span></label></div>
 <div class="layout">
 <section class="panel" aria-labelledby="select-title">
-<div class="panel-head"><h2 id="select-title"><span class="step">1</span>Seleccione los casos</h2><p class="subtext">Puede marcar varios motivos en la misma comunicación.</p></div>
-<div class="mode" role="radiogroup" aria-label="Tipo de comunicación"><label><input type="radio" name="mode" value="observation" checked><span>Observación</span></label><label><input type="radio" name="mode" value="verification"><span>Solicitud de verificación</span></label></div>
+<div class="panel-head"><h2 id="select-title"><span class="step">1</span>Seleccione los casos</h2><p class="subtext" id="selection-hint">Puede marcar varios motivos en la misma comunicación.</p></div>
+<div id="evaluation-controls"><div class="mode" role="radiogroup" aria-label="Tipo de comunicación"><label><input type="radio" name="mode" value="observation" checked><span>Observación</span></label><label><input type="radio" name="mode" value="verification"><span>Solicitud de verificación</span></label></div>
 <div class="support" id="support-section"><label for="support">Tipo de publicación</label><select id="support"><option value="physical">Publicación física</option><option value="ebook">Libro electrónico</option></select></div>
 <div id="observation-pane">
 <div class="section-label"><span>Motivos del numeral 20.1</span><span class="count" id="observation-count">0 seleccionados</span></div>
@@ -57,15 +59,43 @@
 <label class="choice"><input type="checkbox" data-mode="verification" value="unidentifiedEdition"><span>No se puede identificar la edición</span></label>
 </div>
 </div>
+</div>
+<div id="cancel-pane" hidden>
+<div class="notice" id="module-hint">Seleccione una sola causal de anulación. Los tres casos son excluyentes entre sí.</div>
+<div class="cancel-options" role="radiogroup" aria-label="Causal de anulación">
+<label class="choice cancel-case"><input type="radio" name="cancel-case" value="request"><span>Anulado de parte · Solicitud del obligado<small>Numeral 1 del artículo 21 del reglamento.</small></span></label>
+<label class="choice cancel-case"><input type="radio" name="cancel-case" value="duplicate"><span>Anulado de oficio · Duplicidad de registros<small>Literal a) del numeral 2 del artículo 21 del reglamento.</small></span></label>
+<label class="choice cancel-case"><input type="radio" name="cancel-case" value="excluded"><span>Anulado de oficio · Publicación excluida<small>Literal b) del numeral 2 del artículo 21 del reglamento y artículo 6 de la Ley N.º 31253.</small></span></label>
+</div>
+<div class="cancel-fields" id="request-fields" hidden>
+<label for="expedient">Número de expediente de la solicitud</label>
+<input type="text" id="expedient" inputmode="numeric" placeholder="2026-0012303" pattern="[0-9]{4}-[0-9]{7}" maxlength="40" autocomplete="off" aria-describedby="expedient-hint" aria-invalid="false">
+<p class="field-hint" id="expedient-hint">Obligatorio. Formato: xxxx-xxxxxxx. Se conserva cada cero del número.</p>
+</div>
+<div class="cancel-fields" id="duplicate-fields" hidden>
+<label for="valid-deposit">Número de depósito legal del registro válido</label>
+<input type="text" id="valid-deposit" inputmode="numeric" placeholder="2026-10234" pattern="[0-9]{4}-[0-9]{5}" maxlength="40" autocomplete="off" aria-describedby="deposit-hint duplicate-hint" aria-invalid="false">
+<p class="field-hint" id="deposit-hint">Obligatorio. Formato: xxxx-xxxxx. Si pega 202610234, se convierte automáticamente en 2026-10234.</p>
+<p class="field-hint" id="duplicate-hint">Conforme al artículo 21, numeral 2, literal a), la anulación por duplicidad se realiza una vez que el obligado ha presentado los ejemplares en la BNP.</p>
+</div>
+<div id="excluded-fields" hidden>
+<div class="notice">Marque uno o más supuestos que correspondan al material evaluado. Las condiciones de cada supuesto forman parte del motivo generado.</div>
+<div class="exclusion-count" id="exclusion-count">0 supuestos seleccionados</div>
+<div id="exclusion-groups"></div>
+</div>
+</div>
+<div class="extra-section"><label for="additional-text">Texto adicional (opcional)</label><p class="field-hint">Se añade al final de la notificación seleccionada.</p><textarea id="additional-text" placeholder="Escriba aquí una precisión adicional, si corresponde."></textarea></div>
 <div class="clear-row"><small>Los cambios actualizan el texto al instante.</small><button type="button" class="quiet" id="clear">Limpiar selección</button></div>
 </section>
 <section class="panel result" aria-labelledby="result-title">
 <div class="result-head"><h2 id="result-title"><span class="step">2</span>Texto generado</h2><span class="status-dot">Automático</span></div>
 <div class="result-tools"><span class="output-tag" id="output-tag">Observación</span><button type="button" class="copy" id="copy" disabled><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/></svg>Copiar texto</button></div>
+<div class="validation-message" id="validation-message" role="status" aria-live="polite" hidden></div>
 <div class="text-wrap"><label for="output" class="subtext" style="display:block;margin:0 0 9px">Notificación lista para usar</label><textarea id="output" readonly placeholder="Marque al menos un caso para generar el texto con la fecha de hoy."></textarea></div>
 <div class="result-bottom"><span id="character-count">0 caracteres</span><span class="copy-message" id="copy-message" role="status" aria-live="polite"></span></div>
-<div class="result-actions"><label class="toggle"><input type="checkbox" id="uppercase">Texto en mayúsculas</label><button type="button" class="generate" id="refresh">Actualizar texto y fecha</button></div>
+<div class="result-actions"><button type="button" class="generate" id="refresh">Actualizar texto y fecha</button></div>
 <div class="reference"><strong>Referencia normativa</strong><br><span id="reference-text">Numeral 20.1 del artículo 20 del Reglamento de la Ley N.º 31253, aprobado por D.S. N.º 003-2022-MC. Para observaciones, se incluye el plazo de cinco días hábiles.</span></div>
+<div class="norm-links" id="cancel-sources" hidden><a href="https://busquedas.elperuano.pe/dispositivo/NL/1970219-2" target="_blank" rel="noopener noreferrer">Ley N.º 31253</a> · <a href="https://transparencia.cultura.gob.pe/sites/default/files/transparencia/2022/04/decretos-supremos/ds003-2022-mc-anexo.pdf" target="_blank" rel="noopener noreferrer">Reglamento</a></div>
 </section>
 </div>
 <footer>La fecha se genera con la hora de Lima y se actualiza al cambiar la selección o copiar el texto. Esta herramienta redacta comunicaciones; no envía notificaciones.</footer>
@@ -94,6 +124,97 @@ notFound:{reason:'no se ubica la obra en el enlace consignado',action:'proporcio
 restrictedAccess:{reason:'el enlace no permite acceder al contenido necesario para evaluar la publicación',action:'facilitar el acceso al contenido necesario para su evaluación'},
 unidentifiedEdition:{reason:'la información disponible en la plataforma no permite identificar la edición entregada por SIRNADEL',action:'facilitar acceso a la hoja de créditos o incorporar en la descripción del producto datos que permitan identificar esa edición'}
 };
+const exclusionGroups = [
+{letter:'a',title:'Circulación interna',items:[{id:'internal',label:'Publicación de circulación interna y de solo interés para el personal de la entidad que la publicó',reason:'publicación de circulación interna y de solo interés para el personal de la entidad pública o privada que la publicó'}]},
+{letter:'b',title:'Manuales de operación',items:[{id:'manual',label:'Manual de operación de productos o material similar',reason:'manual de operación de productos o material similar'}]},
+{letter:'c',title:'Catálogos, material escolar, agendas y eventos sociales',items:[
+{id:'catalog',label:'Catálogo de venta de productos',reason:'catálogo de venta de productos'},
+{id:'schoolPoster',label:'Afiche escolar',reason:'afiche escolar'},
+{id:'schoolSheet',label:'Lámina escolar',reason:'lámina escolar'},
+{id:'agenda',label:'Agenda sin contenido informativo',reason:'agenda sin contenido informativo'},
+{id:'socialEvent',label:'Impreso para eventos sociales',reason:'impreso para eventos sociales'},
+{id:'similarMaterial',label:'Material similar a los señalados en este literal',reason:'material similar a los catálogos de venta, afiches y láminas escolares, agendas sin contenido informativo o impresos para eventos sociales'}]},
+{letter:'d',title:'Material propagandístico',items:[{id:'advertising',label:'Material propagandístico de fin eminentemente publicitario-comercial, sin fin cultural ni educativo',reason:'material propagandístico de fin eminentemente publicitario-comercial, sin finalidad cultural ni educativa'}]},
+{letter:'e',title:'Objetos tridimensionales',items:[{id:'object',label:'Objeto tridimensional adjunto a la publicación que no es indispensable para su uso',reason:'objeto tridimensional adjunto a la publicación que no es indispensable para su uso'}]},
+{letter:'f',title:'Reimpresiones',items:[{id:'reprint',label:'Reimpresión de una misma edición',reason:'reimpresión de una misma edición'}]},
+{letter:'g',title:'Documentos artesanales o impresos en computadora personal',items:[
+{id:'handmade',label:'Documento elaborado artesanalmente, como una tesis o similar',reason:'documento elaborado artesanalmente, como los comprendidos en el literal g) del artículo 6'},
+{id:'personalPrint',label:'Documento impreso en computadora personal, como una tesis o similar',reason:'documento impreso en computadora personal, como los comprendidos en el literal g) del artículo 6'}]},
+{letter:'h',title:'Contenido personal y redes privadas',items:[
+{id:'email',label:'Correo electrónico o correspondencia personal',reason:'correo electrónico o correspondencia personal'},
+{id:'personalContent',label:'Archivo o contenido electrónico de carácter personal',reason:'archivo o contenido electrónico de carácter personal'},
+{id:'undifferentiated',label:'Contenido electrónico no susceptible de identificación y tratamiento diferenciado',reason:'contenido electrónico no susceptible de identificación y tratamiento diferenciado'},
+{id:'privateNetwork',label:'Publicación albergada únicamente en redes privadas',reason:'publicación albergada únicamente en redes privadas'}]}
+];
+function buildExclusions(){
+for(const group of exclusionGroups){
+const detail=document.createElement('details');
+detail.open=true;
+const summary=document.createElement('summary');
+const title=document.createElement('span');
+title.textContent=group.letter+') '+group.title;
+summary.append(title);
+detail.append(summary);
+const options=document.createElement('div');
+options.className='options';
+for(const item of group.items){
+const label=document.createElement('label');
+label.className='choice';
+const input=document.createElement('input');
+input.type='checkbox';input.value=item.id;input.dataset.mode='exclusion';
+const text=document.createElement('span');text.textContent=item.label;
+label.append(input,text);options.append(label);
+}
+detail.append(options);$('exclusion-groups').append(detail);
+}
+}
+function cancelCase(){return document.querySelector('input[name="cancel-case"]:checked')?.value||'';}
+function normalizeNumber(value,length){
+const clean=value.trim().replace(/[–—−]/g,'-').replace(/\s*-\s*/g,'-');
+return new RegExp('^\\d{'+(length+4)+'}$').test(clean)?clean.slice(0,4)+'-'+clean.slice(4):clean;
+}
+function exclusionSelection(){
+const ids=new Set(checked('exclusion'));
+const result=[];
+for(const group of exclusionGroups)for(const item of group.items)if(ids.has(item.id))result.push({...item,letter:group.letter});
+return result;
+}
+function cancellationState(){
+const type=cancelCase();
+const selections=exclusionSelection();
+$('request-fields').hidden=type!=='request';
+$('duplicate-fields').hidden=type!=='duplicate';
+$('excluded-fields').hidden=type!=='excluded';
+$('expedient').disabled=type!=='request';
+$('valid-deposit').disabled=type!=='duplicate';
+document.querySelectorAll('input[data-mode="exclusion"]').forEach(input=>input.disabled=type!=='excluded');
+$('exclusion-count').textContent=selections.length+' '+(selections.length===1?'supuesto seleccionado':'supuestos seleccionados');
+const expedient=normalizeNumber($('expedient').value,7);
+const deposit=normalizeNumber($('valid-deposit').value,5);
+const validExpedient=/^\d{4}-\d{7}$/.test(expedient);
+const validDeposit=/^\d{4}-\d{5}$/.test(deposit);
+$('expedient').setAttribute('aria-invalid',String(type==='request'&&!!expedient&&!validExpedient));
+$('valid-deposit').setAttribute('aria-invalid',String(type==='duplicate'&&!!deposit&&!validDeposit));
+let error='';
+if(!type)error='Seleccione una causal de anulación.';
+else if(type==='request'&&!validExpedient)error='Ingrese un expediente válido con el formato xxxx-xxxxxxx; por ejemplo, 2026-0012303.';
+else if(type==='duplicate'&&!validDeposit)error='Ingrese el depósito legal del registro válido con el formato xxxx-xxxxx o sus nueve dígitos sin guion.';
+else if(type==='excluded'&&!selections.length)error='Marque al menos un supuesto de exclusión del artículo 6 de la Ley N.º 31253.';
+return {type,selections,expedient,deposit,error};
+}
+function cancellationText(state){
+if(state.error)return '';
+const base='del artículo 21 '+norm;
+if(state.type==='request')return `${today()}. Anulado de parte. En atención a su solicitud presentada mediante el expediente N.º ${state.expedient}, se anula el registro por no haberse utilizado el número de depósito legal asignado. Base: numeral 1 ${base}.`;
+if(state.type==='duplicate')return `${today()}. Anulado de oficio. Por haberse generado dos o más números de registro de depósito legal para la misma publicación. Véase el registro válido con depósito legal N.º ${state.deposit}. Base: literal a) del numeral 2 ${base}.`;
+const reasons=state.selections.map(item=>item.reason);
+const letters=Array.from(new Set(state.selections.map(item=>item.letter))).map(letter=>letter+')');
+return `${today()}. Anulado de oficio. Por haberse asignado un número de registro de depósito legal a una publicación no afecta a la Ley N.º 31253. ${reasons.length===1?'Motivo':'Motivos'}: ${reasons.join('; ')}. Base: literal b) del numeral 2 ${base} y ${letters.length===1?'literal':'literales'} ${joinList(letters)} del artículo 6 de la Ley N.º 31253.`;
+}
+function additionalText(){
+const extra=$('additional-text').value.trim();
+return extra?(/(?:[.!?…]|[.!?…]["»”')])$/.test(extra)?extra:extra+'.'):'';
+}
 function joinList(items){
 if(items.length<2)return items[0]||'';
 const last=items[items.length-1];
@@ -105,7 +226,7 @@ const parts=new Intl.DateTimeFormat('es-PE',{timeZone:'America/Lima',day:'2-digi
 const get=type=>parts.find(part=>part.type===type).value;
 return `${get('day')}/${get('month')}/${get('year')}`;
 }
-function currentMode(){return document.querySelector('input[name="mode"]:checked').value;}
+function currentMode(){return document.querySelector('input[name="module"]:checked').value==='cancellation'?'cancellation':document.querySelector('input[name="mode"]:checked').value;}
 function checked(mode){return Array.from(document.querySelectorAll(`input[data-mode="${mode}"]:checked`)).map(input=>input.value);}
 function has(id){return document.querySelector(`input[data-mode="observation"][value="${id}"]`).checked;}
 function capitalize(text){return text.charAt(0).toUpperCase()+text.slice(1);}
@@ -159,7 +280,10 @@ return `${today()}. Para continuar la verificación: ${reasons.join('; ')}. Se s
 }
 function generate(){
 const mode=currentMode();
-$('support-section').hidden=mode==='verification';
+$('evaluation-controls').hidden=mode==='cancellation';
+$('cancel-pane').hidden=mode!=='cancellation';
+$('support-section').hidden=mode!=='observation';
+$('selection-hint').textContent=mode==='cancellation'?'Elija una causal y complete los datos del registro.':'Puede marcar varios motivos en la misma comunicación.';
 const physical=$('support').value==='physical';
 const ebook=$('support').value==='ebook';
 for(const [selector,visible] of [['[data-physical-only]',physical],['[data-digital-only]',!physical]]){
@@ -179,15 +303,25 @@ for(const item of ['observation','verification']){
 const count=checked(item).length;
 $(item+'-count').textContent=`${count} ${count===1?'seleccionado':'seleccionados'}`;
 }
-const ids=checked(mode);
-let text=ids.length?(mode==='observation'?observationText(ids):verificationText(ids)):'';
-if($('uppercase').checked)text=text.toLocaleUpperCase('es-PE');
+const state=cancellationState();
+const ids=mode==='cancellation'?[]:checked(mode);
+let text=mode==='cancellation'?cancellationText(state):ids.length?(mode==='observation'?observationText(ids):verificationText(ids)):'';
+const extra=additionalText();
+if(text&&extra)text+=' '+extra;
+$('validation-message').hidden=mode!=='cancellation'||!state.error;
+$('validation-message').textContent=mode==='cancellation'?state.error:'';
+$('output').placeholder=mode==='cancellation'?'Seleccione una causal y complete sus datos obligatorios para generar la notificación.':'Marque al menos un caso para generar el texto con la fecha de hoy.';
 $('output').value=text;
 $('copy').disabled=!text;
 $('character-count').textContent=`${text.length} caracteres`;
 $('today').textContent=today();
-$('output-tag').textContent=mode==='observation'?'Observación':'Solicitud de verificación';
+$('output-tag').textContent=mode==='cancellation'?'Anulación':mode==='observation'?'Observación':'Solicitud de verificación';
+$('cancel-sources').hidden=mode!=='cancellation';
 $('reference-text').textContent=mode==='observation'?'Numeral 20.1 del artículo 20 del Reglamento de la Ley N.º 31253, aprobado por D.S. N.º 003-2022-MC. Para observaciones, se incluye el plazo de cinco días hábiles.':'Numeral 12.6 del artículo 12 del Reglamento de la Ley N.º 31253, aprobado por D.S. N.º 003-2022-MC. Solicitud de acceso o información para continuar la verificación.';
+if(mode==='cancellation'){
+const references={request:'Numeral 1 del artículo 21: anulación a solicitud expresa del obligado.',duplicate:'Literal a) del numeral 2 del artículo 21: duplicidad de números para una misma publicación.',excluded:'Literal b) del numeral 2 del artículo 21 del reglamento y artículo 6 de la Ley N.º 31253: publicaciones excluidas.'};
+$('reference-text').textContent=(references[state.type]||'Artículo 21 del Reglamento de la Ley N.º 31253.')+' Reglamento aprobado por D.S. N.º 003-2022-MC.';
+}
 $('copy-message').textContent='';
 }
 async function copyText(){
@@ -205,8 +339,27 @@ try{copied=document.execCommand('copy');}catch(error){copied=false;}
 }
 $('copy-message').textContent=copied?'Texto copiado':'Texto seleccionado. Use Ctrl+C o ⌘C.';
 }
-document.querySelectorAll('input,select').forEach(input=>{input.addEventListener('change',generate);if(input.type==='text'||input.type==='number')input.addEventListener('input',generate);});
-$('clear').addEventListener('click',()=>{const mode=currentMode();document.querySelectorAll(`input[data-mode="${mode}"]`).forEach(input=>input.checked=false);if(mode==='observation'){$('copies').value='';$('correct-number').value='';}generate();});
+buildExclusions();
+document.querySelectorAll('input,select').forEach(input=>{
+input.addEventListener('change',generate);
+if(input.type==='text'||input.type==='number')input.addEventListener('input',()=>{
+if(input.id==='expedient')input.value=normalizeNumber(input.value,7);
+if(input.id==='valid-deposit')input.value=normalizeNumber(input.value,5);
+generate();
+});
+});
+$('additional-text').addEventListener('input',generate);
+$('clear').addEventListener('click',()=>{
+const mode=currentMode();
+if(mode==='cancellation'){
+document.querySelectorAll('input[name="cancel-case"],input[data-mode="exclusion"]').forEach(input=>input.checked=false);
+$('expedient').value='';$('valid-deposit').value='';
+}else{
+document.querySelectorAll(`input[data-mode="${mode}"]`).forEach(input=>input.checked=false);
+if(mode==='observation'){$('copies').value='';$('correct-number').value='';}
+}
+$('additional-text').value='';generate();
+});
 $('refresh').addEventListener('click',generate);
 $('copy').addEventListener('click',copyText);
 window.addEventListener('focus',generate);
